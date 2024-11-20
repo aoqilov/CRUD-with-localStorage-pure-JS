@@ -1,0 +1,218 @@
+body {
+  font-family: Arial, sans-serif;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+#timer {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  height: 45px;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+button {
+  height: 45px;
+  font-size: 16px;
+}
+.list {
+  background-color: aliceblue;
+  list-style: none;
+  padding: 15px;
+}
+
+.list .list-item {
+  box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+  background-color: #fff;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px 20px;
+  max-width: 70%;
+}
+.list-item.darks {
+  background-color: rgba(236, 234, 238, 0.329);
+}
+
+.list-item .list-text {
+  font-size: 20px;
+  color: rgb(77, 77, 77);
+}
+.list-item .list-timebox p {
+  margin: auto 0;
+  color: grey;
+}
+/* Checkboxning asosiy ko‘rinishi */
+.list-checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none; /* Standart ko‘rinishni olib tashlash */
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+/* Checkbox belgilangan (checked) holatda */
+.list-checkbox:checked {
+  background-color: #28a745; /* Yashil rang */
+  border-color: #28a745; /* Yashil chegara */
+}
+
+/* Checkbox belgilangan holatda ichki belgini o‘rnatish */
+.list-checkbox:checked::after {
+  content: "✔"; /* Belgini qo‘yish */
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  left: 3px;
+  top: -1px;
+}
+
+/* Checkboxga hover (ustiga keltirilganda) effekti */
+.list-checkbox:hover {
+  border-color: #28a745;
+}
+
+/* Agar checkboxni btns bilan bir xil qilishni xohlasangiz */
+.list-checkbox:checked + .list-btns i {
+  color: #fff;
+  background-color: #28a745;
+  border-radius: 5px;
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+.list-btns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.list-btns i {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+.list-btns i:nth-child(2) {
+  background-color: rgb(139, 139, 11);
+}
+
+.list-btns i:nth-child(3) {
+  background-color: rgb(184, 0, 0);
+}
+.list-btns i:nth-child(1) {
+  background-color: gray;
+}
+.list-btns i:nth-child(1).darks {
+  background-color: green;
+}
+.list-btns i:hover {
+  cursor: pointer;
+}
+
+/* modall container */
+.modall-background {
+  display: none;
+  background-color: #000000b9;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 120vh;
+}
+.modall-background.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130vh;
+}
+.modall {
+  background-color: white;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* modall header */
+
+.modall-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.modall-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: red;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* modall body */
+.modall-body {
+  padding: 16px;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* modall footer */
+.modall-footer {
+  padding: 16px;
+  text-align: right;
+}
+.clear {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.save-btn {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.save-btn:hover {
+  background-color: #0b5ed7;
+}
